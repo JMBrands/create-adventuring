@@ -1,0 +1,11 @@
+{
+    "block.create_adventuring.beef_block": "Raw Beef Block",
+    "block.create_adventuring.chicken_block": "Raw Chicken Block",
+    "block.create_adventuring.cod_block": "Raw Cod Block",
+    "block.create_adventuring.mutton_block": "Raw Mutton Block",
+    "block.create_adventuring.pork_block": "Raw Porkchop Block",
+    "block.create_adventuring.potato_block": "Potato Block",
+    "block.create_adventuring.rabbit_block": "Raw Rabbit Block",
+    "block.create_adventuring.salmon_block": "Raw Salmon Block",
+    "itemGroup.create_adventuring.create_adventuring": "Create: Adventuring"
+}

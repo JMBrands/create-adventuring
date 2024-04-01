@@ -11,13 +11,6 @@ public class MeatBlock extends Block {
     public MeatBlock(Properties properties) {
         super(properties);
     }
-    public static void registerRenders() {
-
-    }
-
-    public static void registerRender(BlockItem item) {
-        Minecraft.getInstance().getItemRenderer().getItemModelShaper().register(item, new  ModelResourceLocation(CreateAdventuring.MODID, "beef_block","inventory"));
-    }
 
 
 }

@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"normal": {"model": "create_adventuring:beef_block"}
+		"": {"model": "create_adventuring:block/beef_block"}
 	}
 }

@@ -1,0 +1,3 @@
+
+(wf-panel:562223): Gdk-CRITICAL **: 12:18:40.541: gdk_wayland_display_get_wl_display: assertion 'GDK_IS_WAYLAND_DISPLAY (display)' failed
+Failed to connect to wayland display! Are you sure you are running a wayland compositor?
