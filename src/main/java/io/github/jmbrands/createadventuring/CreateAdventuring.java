@@ -6,6 +6,7 @@ import com.mojang.logging.LogUtils;
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.tterrag.registrate.util.entry.BlockEntry;
 
+import io.github.jmbrands.createadventuring.roastingjack.RoastingJackBlock;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.core.registries.Registries;
@@ -55,156 +56,9 @@ public class CreateAdventuring {
     // registered under the "examplemod" namespace
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister
             .create(Registries.CREATIVE_MODE_TAB, MODID);
+            
+    public static final CreateRegistrate REGISTRATE = CreateRegistrate.create(MODID);
 
-    public static List<RegistryObject<Block>> BLOCKS_LIST = new ArrayList<RegistryObject<Block>>();
-    public static List<RegistryObject<Item>> ITEMS_LIST = new ArrayList<RegistryObject<Item>>();
-
-    // Creates a new Block with the id "examplemod:example_block", combining the
-    // namespace and path
-    public static final RegistryObject<Block> BEEF_BLOCK = BLOCKS.register("beef_block",
-            () -> new MeatBlock(BlockBehaviour.Properties.of().mapColor(MapColor.STONE)));
-    static {
-        BLOCKS_LIST.add(BEEF_BLOCK);
-    }
-    // Creates a new BlockItem with the id "examplemod:example_block", combining the
-    // namespace and path
-    public static final RegistryObject<Item> BEEF_BLOCK_ITEM = ITEMS.register("beef_block",
-            () -> new BlockItem(BEEF_BLOCK.get(), new Item.Properties().food(new FoodProperties.Builder()
-                    .nutrition(3 * 9).saturationMod(1.8f * 9f).build())));
-    static {
-        ITEMS_LIST.add(BEEF_BLOCK_ITEM);
-    }
-
-    public static final RegistryObject<Block> PORK_BLOCK = BLOCKS.register("pork_block",
-            () -> new MeatBlock(BlockBehaviour.Properties.of().mapColor(MapColor.STONE)));
-    static {
-        BLOCKS_LIST.add(PORK_BLOCK);
-    }
-    // Creates a new BlockItem with the id "examplemod:example_block", combining the
-    // namespace and path
-    public static final RegistryObject<Item> PORK_BLOCK_ITEM = ITEMS.register("pork_block",
-            () -> new BlockItem(PORK_BLOCK.get(), new Item.Properties().food(new FoodProperties.Builder()
-                    .nutrition(3 * 9).saturationMod(0.6f * 9f).build())));
-    static {
-        ITEMS_LIST.add(PORK_BLOCK_ITEM);
-    }
-
-    public static final RegistryObject<Block> CHICKEN_BLOCK = BLOCKS.register("chicken_block",
-            () -> new MeatBlock(BlockBehaviour.Properties.of().mapColor(MapColor.STONE)));
-    static {
-        BLOCKS_LIST.add(CHICKEN_BLOCK);
-    }
-
-    // Creates a new BlockItem with the id "examplemod:example_block", combining the
-    // namespace and path
-    public static final RegistryObject<Item> CHICKEN_BLOCK_ITEM = ITEMS.register("chicken_block",
-            () -> new BlockItem(CHICKEN_BLOCK.get(), new Item.Properties().food(new FoodProperties.Builder()
-                    .nutrition(2 * 9).saturationMod(1.2f * 9f).build())));
-    static {
-        ITEMS_LIST.add(CHICKEN_BLOCK_ITEM);
-    }
-
-    public static final RegistryObject<Block> RABBIT_BLOCK = BLOCKS.register("rabbit_block",
-            () -> new MeatBlock(BlockBehaviour.Properties.of().mapColor(MapColor.STONE)));
-    static {
-        BLOCKS_LIST.add(RABBIT_BLOCK);
-    }
-
-    // Creates a new BlockItem with the id "examplemod:example_block", combining the
-    // namespace and path
-    public static final RegistryObject<Item> RABBIT_BLOCK_ITEM = ITEMS.register("rabbit_block",
-            () -> new BlockItem(RABBIT_BLOCK.get(), new Item.Properties().food(new FoodProperties.Builder()
-                    .nutrition(3 * 9).saturationMod(1.8f * 9f).build())));
-    static {
-        ITEMS_LIST.add(RABBIT_BLOCK_ITEM);
-    }
-
-    public static final RegistryObject<Block> MUTTON_BLOCK = BLOCKS.register("mutton_block",
-            () -> new MeatBlock(BlockBehaviour.Properties.of().mapColor(MapColor.STONE)));
-    static {
-        BLOCKS_LIST.add(MUTTON_BLOCK);
-    }
-
-    // Creates a new BlockItem with the id "examplemod:example_block", combining the
-    // namespace and path
-    public static final RegistryObject<Item> MUTTON_BLOCK_ITEM = ITEMS.register("mutton_block",
-            () -> new BlockItem(MUTTON_BLOCK.get(), new Item.Properties().food(new FoodProperties.Builder()
-                    .nutrition(2 * 9).saturationMod(1.2f * 9f).build())));
-    static {
-        ITEMS_LIST.add(MUTTON_BLOCK_ITEM);
-    }
-
-    public static final RegistryObject<Block> COD_BLOCK = BLOCKS.register("cod_block",
-            () -> new MeatBlock(BlockBehaviour.Properties.of().mapColor(MapColor.STONE)));
-    static {
-        BLOCKS_LIST.add(COD_BLOCK);
-    }
-
-    // Creates a new BlockItem with the id "examplemod:example_block", combining the
-    // namespace and path
-    public static final RegistryObject<Item> COD_BLOCK_ITEM = ITEMS.register("cod_block",
-            () -> new BlockItem(COD_BLOCK.get(), new Item.Properties().food(new FoodProperties.Builder()
-                    .nutrition(2 * 9).saturationMod(0.4f * 9f).build())));
-    static {
-        ITEMS_LIST.add(COD_BLOCK_ITEM);
-    }
-
-    public static final RegistryObject<Block> SALMON_BLOCK = BLOCKS.register("salmon_block",
-            () -> new MeatBlock(BlockBehaviour.Properties.of().mapColor(MapColor.STONE)));
-    static {
-        BLOCKS_LIST.add(SALMON_BLOCK);
-    }
-
-    // Creates a new BlockItem with the id "examplemod:example_block", combining the
-    // namespace and path
-    public static final RegistryObject<Item> SALMON_BLOCK_ITEM = ITEMS.register("salmon_block",
-            () -> new BlockItem(SALMON_BLOCK.get(), new Item.Properties().food(new FoodProperties.Builder()
-                    .nutrition(2 * 9).saturationMod(0.2f * 9f).build())));
-    static {
-        ITEMS_LIST.add(SALMON_BLOCK_ITEM);
-    }
-
-    public static final RegistryObject<Block> POTATO_BLOCK = BLOCKS.register("potato_block",
-            () -> new MeatBlock(BlockBehaviour.Properties.of().mapColor(MapColor.STONE)));
-    static {
-        BLOCKS_LIST.add(POTATO_BLOCK);
-    }
-
-    // Creates a new BlockItem with the id "examplemod:example_block", combining the
-    // namespace and path
-    public static final RegistryObject<Item> POTATO_BLOCK_ITEM = ITEMS.register("potato_block",
-            () -> new BlockItem(POTATO_BLOCK.get(), new Item.Properties().food(new FoodProperties.Builder()
-                    .nutrition(1 * 9).saturationMod(0.6f * 9f).build())));
-    static {
-        ITEMS_LIST.add(POTATO_BLOCK_ITEM);
-    }
-
-    /*
-     * public static final CreateRegistrate REGISTRATE =
-     * CreateRegistrate.create(MODID);
-     * 
-     * public static final BlockEntry<Block> BEEF_BLOCK =
-     * REGISTRATE.block("beef_block", Block::new)
-     * .initialProperties(() -> Blocks.STONE)
-     * .item()
-     * .build()
-     * .register();
-     */
-    // Creates a creative tab with the id "examplemod:example_tab" for the example
-    // item, that is placed after the combat tab
-    public static final RegistryObject<CreativeModeTab> ADVENTURING_TAB = CREATIVE_MODE_TABS
-            .register("create_adventuring_tab", () -> CreativeModeTab.builder()
-                    .withTabsBefore(CreativeModeTabs.COMBAT)
-                    .icon(new IconSupplier(new ItemStack(BEEF_BLOCK_ITEM.get())))
-                    .title(Component.translatable("itemGroup." + MODID + ".create_adventuring"))
-                    .displayItems((parameters, output) -> {
-                        // output.accept(EXAMPLE_ITEM.get()); // Add the example item to the tab. For
-                        // your own tabs, this method is preferred over the event
-                        for (RegistryObject<Item> item : ITEMS_LIST) {
-                            output.accept(item.get());
-                        }
-
-                    }).build());
 
     public CreateAdventuring() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();

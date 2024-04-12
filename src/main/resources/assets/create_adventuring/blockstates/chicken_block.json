@@ -1,0 +1,5 @@
+{
+	"variants": {
+		"": {"model": "create_adventuring:block/chicken_block"}
+	}
+}
